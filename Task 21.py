@@ -1,0 +1,36 @@
+#todo: Задан шаблон config_default.txt, где каждому в текстовом файле параметру
+# нужно сопоставить данные для подстановки.
+# Содержимое файла config_default.txt
+# Конфигурация приложения.
+
+import csv
+
+config_values = {
+    'app_name': 'NextGen',
+    'version': '1.0.0',
+    'debug':  True,
+    'db_host': 'localhost',
+    'db_port': 5432,
+    'db_name': 'my_database',
+    'db_user': 'admin',
+    'db_password': 'secret123',
+    'api_key': 'ak_123456789',
+    'api_secret': 'sk_987654321',
+    'base_url': 'https://api.example.com',
+    'log_file': '/var/log/app.log',
+    'data_dir': '/opt/app/data',
+    'temp_dir': '/tmp/app',
+    'max_workers': 10,
+    'timeout': 30,
+    'retry_attempts': 3
+}
+
+f = open("Task21config_default.txt", "w+")
+with f:
+    writer = csv.writer(f , delimiter='=')
+    for key, value in config_values.items():
+        writer.writerow([key, value])
+
+f.close()
+
+
