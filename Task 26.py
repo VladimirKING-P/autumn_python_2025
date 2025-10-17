@@ -40,3 +40,9 @@ print("Зашифрованный текст:")
 for line in encrypted_text:
     print(line, end='')
 
+f = open('Task_26encrypted.txt', 'w', encoding='utf-8')
+for line in encrypted_text:
+    f.write(line)
+
+f.close()
+
