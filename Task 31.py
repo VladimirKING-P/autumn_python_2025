@@ -1,4 +1,4 @@
-#Функция для извлечения IP адресов с кодом ошибок 4хх и 5хх
+#todo Функция для извлечения IP адресов с кодом ошибок 4хх и 5хх
 def extract_error_ips(log_entries):
     error_ips = []
 
@@ -22,3 +22,4 @@ log_entries = [
 
 result = extract_error_ips(log_entries)
 print(result)
+
